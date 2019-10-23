@@ -19,16 +19,15 @@
 [download-image]: https://img.shields.io/npm/dm/base64zip.svg?style=flat-square
 [download-url]: https://npmjs.org/package/base64zip
 
-This module encapsulates gzip compression and base64 encoding support.
+这个模块简单的封装了gzip压缩和base64编码支持功能
 
-## [中文说明](./README.zh_CN.md)
-## Install
+## 安装
 
 ```bash
 $ npm i base64zip --save
 ```
 
-## Usage
+## 使用方法
 ```js
 'use strict';
 
@@ -37,18 +36,18 @@ const { gzip, ungzip } = require('base64zip');
 let zipped = await gzip('some text');
 let unzipped = await ungzip(zipped);
 ```
-More usage can be found in [test.js](./test.js)
+在[test.js](./test.js)中可以看到更多用法
 
 ## gzip(data, options)
-* **data** can be a string or any serializable object
-* In addition to the options that come with Node.js, **options** also support the extended option **base64**.
-* The buffer is returned by default, but the base64 string is returned when **options.base64** is true.
+* data可以是字符串或者任意可序列化的对象
+* options除了支持node自带的属性外，还支持扩展属性base64
+* 默认返回buffer，但options.base64为true时返回base64字符串
 ## ungzip(data, options)
-* **data** should be a valid buffer or base64 string
-* In addition to the options that come with Node.js, **options** also support the extended option **parse**.
-* The buffer is returned by default, but the result of JSON.parse is returned when **options.parse** is true.
+* data应为有效的buffer或base64字符串
+* options除了支持node自带的属性外，还支持扩展属性parse
+* 默认返回buffer，但options.parse为true时返回用JSON.parse处理之后的对象
 
-## Unit tests
+## 测试
 
 ```sh
 npm test
@@ -56,5 +55,4 @@ npm test
 
 ## License
 
-[MIT](LICENSE)<br />
-This README was translate by [google](https://translate.google.cn)
+[MIT](LICENSE)

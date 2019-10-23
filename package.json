@@ -1,0 +1,39 @@
+{
+  "name": "base64zip",
+  "version": "1.0.0",
+  "description": "A simple Node.js compress/decompress module",
+  "keywords": [
+    "gzip",
+    "base64",
+    "compress"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-egg": "^7.5.1",
+    "mocha": "^6.2.2",
+    "istanbul": "^0.4.5"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "mocha test",
+    "cov": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
+    "lint": "eslint ."
+  },
+  "files": [
+    "index.js"
+  ],
+  "ci": {
+    "version": "8, 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/985ch/base64zip.git"
+  },
+  "homepage": "https://github.com/985ch/base64zip#readme",
+  "author": "985ch",
+  "license": "MIT"
+}
